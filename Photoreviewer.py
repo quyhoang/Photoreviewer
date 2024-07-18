@@ -52,9 +52,16 @@ class ImageGallery:
         self.root.bind("<Down>", lambda event: self.clear_current_image())
         self.root.bind("<Delete>", lambda event: self.delete_current_image())
         self.root.bind("<Return>", lambda event: self.open_in_explorer())
-        self.root.bind("o", lambda event: self.recognize_text())  # Bind 'o' key to recognize_text function
         self.root.bind("<Home>", lambda event: self.open_webpage())  # Bind Home key to open webpage
         self.root.bind("<End>", lambda event: self.rename_and_exit())  # Bind End key to rename and exit
+        
+        # Bind keys to functions
+        self.root.bind("<Tab>", lambda event: self.show_previous_sequential_image())
+        self.root.bind("<Control_L>", lambda event: self.show_next_sequential_image())
+        self.root.bind("<Alt_L>", lambda event: self.recognize_text())  # Left Alt key
+        self.root.bind("a", lambda event: self.show_previous_sequential_image())
+        self.root.bind("d", lambda event: self.show_next_sequential_image())
+        self.root.bind("o", lambda event: self.recognize_text())
         
         # Show first photo on startup
         if self.image_files:
@@ -239,6 +246,24 @@ class ImageGallery:
             os.rename(self.cleared_folder, self.reviewed_folder)
             self.show_temp_message("Renamed 'cleared' folder to 'reviewed'")
         self.root.quit()  # Exit the application
+        
+    def show_next_sequential_image(self):
+        if not self.image_files:
+            self.show_temp_message("No images left in the folder.")
+            return
+        
+        next_index = (self.current_image_index + 1) % len(self.image_files)
+        self.current_image_index = next_index
+        self.show_image(self.image_files[self.current_image_index])
+
+    def show_previous_sequential_image(self):
+        if not self.image_files:
+            self.show_temp_message("No images left in the folder.")
+            return
+        
+        previous_index = (self.current_image_index - 1) % len(self.image_files)
+        self.current_image_index = previous_index
+        self.show_image(self.image_files[self.current_image_index])
         
 if __name__ == "__main__":
     root = tk.Tk()
