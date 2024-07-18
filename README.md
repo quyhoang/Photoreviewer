@@ -36,9 +36,14 @@ Mục tiêu chính của Photoreviewer là giúp người dùng quản lý hình
 - **Phím Mũi Tên Xuống (Down Arrow Key)**: Di chuyển hình ảnh hiện tại vào thư mục "cleared". Mọi ảnh trong thư mục “cleared” sẽ không xuất hiện trở lại. Để xem ảnh đó, nhấn phím `End` để đổi tên thư mục “cleared” thành “reviewed” và kết thúc phiên làm việc. Khi bắt đầu phiên làm việc mới, các ảnh trong thư mục “reviewed” sẽ được xuất hiện nếu bạn mở ứng dụng từ thư mục chứa “reviewed”.
 - **Phím Delete (Delete Key)**: Xóa hình ảnh hiện tại.
 - **Phím Enter (Return Key)**: Mở hình ảnh hiện tại trong trình quản lý tệp (Window Explorers)
-- **Phím "o"**: Nhận dạng văn bản từ hình ảnh hiện tại và sao chép vào clipboard.
 - **Phím Home**: Mở trang này (trang hướng dẫn)
 - **Phím End**: Đổi tên thư mục "cleared" thành "reviewed" và thoát ứng dụng.
+- **Phím Alt trái**: Nhận dạng văn bản từ hình ảnh hiện tại và sao chép vào clipboard.
+- **Phím Tab**: Hiển thị ảnh trước theo thứ tự bình thường (không ngẫu nhiên).
+- **Phím Control trái**: Hiển thị ảnh sau theo thứ tự bình thường (không ngẫu nhiên).
+- **Phím "o"**: Nhận dạng văn bản từ hình ảnh hiện tại và sao chép vào clipboard.
+- **Phím "a"**: Hiển thị ảnh trước theo thứ tự bình thường (không ngẫu nhiên).
+- **Phím "d"**: Hiển thị ảnh sau theo thứ tự bình thường (không ngẫu nhiên).
 
 ### Thư Mục
 
